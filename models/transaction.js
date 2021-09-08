@@ -25,5 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Transaction',
   });
+
+  Transaction.addHook('beforeCreate', (trx, option) => {
+    trx.status = "pending"
+  })
   return Transaction;
 };

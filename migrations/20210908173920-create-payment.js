@@ -7,6 +7,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },      
+      order_id: {
+        type: Sequelize.INTEGER
       },
       status: {
         type: Sequelize.STRING
