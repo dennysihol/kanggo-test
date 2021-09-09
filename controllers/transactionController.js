@@ -42,7 +42,7 @@ class TransactionController {
         }
         Transaction.update(updatedTrx, {
             where: {
-                order_id: +id
+                id: +id
             }
         })
             .then((trx) => {
@@ -57,7 +57,7 @@ class TransactionController {
         const id = req.params.id
         Transaction.destroy({
             where: {
-                order_id: +id
+                id: +id
             }
         })
             .then((trx) => {
